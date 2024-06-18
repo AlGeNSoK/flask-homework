@@ -1,0 +1,119 @@
+@baseUrl = http://127.0.0.1:5000
+
+POST {{baseUrl}}/user/
+Content-Type: application/json
+
+{
+  "username": "user1",
+  "password": "123456789",
+  "email": "11@yandex.ru"
+}
+
+###
+
+POST {{baseUrl}}/user/
+Content-Type: application/json
+
+{
+  "username": "user5",
+  "password": "p123456789/sss",
+  "email": "55@yandex.ru"
+}
+
+###
+GET {{baseUrl}}/user/11
+###
+DELETE {{baseUrl}}/user/11
+Content-Type: application/json
+
+{
+  "username": "user5",
+  "password": "p123456789/sss"
+}
+###
+PATCH {{baseUrl}}/user/7
+Content-Type: application/json
+
+{
+  "username": "user2",
+  "password": "p123456789/",
+  "email": "22@yandex.ru",
+  "new_email": "77@yandex.ru"
+}
+###
+POST {{baseUrl}}/user/
+Content-Type: application/json
+
+{
+  "username": "user4",
+  "password": "1111111111",
+  "email": "44@yandex.ru"
+}
+###
+PATCH {{baseUrl}}/user/10
+Content-Type: application/json
+
+{
+  "username": "user4",
+  "password": "1111111111",
+  "email": "4444@yandex.ru"
+}
+###
+GET {{baseUrl}}/user/10
+###
+POST {{baseUrl}}/advertisement/
+Content-Type: application/json
+
+{
+  "username": "user2",
+  "password": "p123456789/",
+  "title": "Articles3",
+  "description": "fgdfgrsgfgs"
+}
+###
+GET {{baseUrl}}/advertisement/4
+###
+PATCH {{baseUrl}}/advertisement/4
+Content-Type: application/json
+
+{
+  "username": "user2",
+  "password": "p123456789/",
+  "title": "Articles33",
+  "description": "qwert55555555"
+}
+###
+PATCH {{baseUrl}}/advertisement/4
+Content-Type: application/json
+
+{
+  "username": "user2",
+  "password": "p123456789/",
+  "title": "Articles77"
+}
+###
+POST {{baseUrl}}/advertisement/
+Content-Type: application/json
+
+{
+  "username": "user4",
+  "password": "1111111111",
+  "title": "Articles2",
+  "description": "asdfgh"
+}
+###
+DELETE {{baseUrl}}/advertisement/3
+Content-Type: application/json
+
+{
+  "username": "user4",
+  "password": "1111111111"
+}
+###
+DELETE {{baseUrl}}/advertisement/4
+Content-Type: application/json
+
+{
+  "username": "user2",
+  "password": "p123456789/"
+}
